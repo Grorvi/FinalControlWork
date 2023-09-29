@@ -47,3 +47,44 @@ user@docker-server1:~$ ls dir_file/
 file_1
 
 ```
+
+### Задание 3
+
+Подключить дополнительный репозиторий MySQL. Установить любой пакет
+из этого репозитория
+
+**Решение**
+
+```
+user@docker-server1:~$ sudo apt-get update
+user@docker-server1:~$ sudo apt-get install mysql-server
+
+done!
+update-alternatives: используется /var/lib/mecab/dic/ipadic-utf8 для предоставления /var/lib/mecab/dic/debian (mecab-dictionary) в автоматическом режиме
+Настраивается пакет libhtml-parser-perl:amd64 (3.76-1build2) …
+Настраивается пакет libhttp-message-perl (6.36-1) …
+Настраивается пакет mysql-server-8.0 (8.0.32-0ubuntu0.22.04.2) …
+update-alternatives: используется /etc/mysql/mysql.cnf для предоставления /etc/mysql/my.cnf (my.cnf) в автоматическом режиме
+Renaming removed key_buffer and myisam-recover options (if present)
+mysqld will log errors to /var/log/mysql/error.log
+mysqld is running as pid 12277
+Created symlink /etc/systemd/system/multi-user.target.wants/mysql.service → /lib/systemd/system/mysql.service.
+Настраивается пакет libcgi-pm-perl (4.54-1) …
+Настраивается пакет libhtml-template-perl (2.97-1.1) …
+Настраивается пакет mysql-server (8.0.32-0ubuntu0.22.04.2) …
+Настраивается пакет libcgi-fast-perl (1:2.15-1) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+Обрабатываются триггеры для libc-bin (2.35-0ubuntu3.1) …
+Scanning processes...                                                                                                                                           
+Scanning linux images...                                                                                                                                        
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+```
