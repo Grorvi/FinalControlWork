@@ -27,3 +27,23 @@ user@docker-server1:~/GB$ cat Mans_friends
 dogs, cats, hamsters
 Horses, camels and donkeys
 ```
+
+### Задание 2
+
+Создать директорию, переместить файл туда.
+
+**Решение**
+
+```
+user@docker-server1:~$ mkdir dir_file
+user@docker-server1:~$ ls
+dir_file  file_1
+
+user@docker-server1:~$ mv file_1 dir_file/
+user@docker-server1:~$ ls
+dir_file
+
+user@docker-server1:~$ ls dir_file/
+file_1
+
+```
