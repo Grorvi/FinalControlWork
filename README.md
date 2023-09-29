@@ -88,3 +88,15 @@ No user sessions are running outdated binaries.
 
 No VM guests are running outdated hypervisor (qemu) binaries on this host.
 ```
+
+### Задание 4
+
+Установить и удалить deb-пакет с помощью dpkg.
+
+**Решение**
+
+````
+sudo wget https://download.docker.com/linux/ubuntu/dists/jammy/pool/stable/amd64/docker-ce-cli_20.10.13~3-0~ubuntu-jammy_amd64.deb
+sudo dpkg -i docker-ce-cli_20.10.133-0ubuntu-jammy_amd64.deb
+sudo dpkg -r docker-ce-cli
+````
