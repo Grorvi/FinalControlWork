@@ -367,3 +367,75 @@ FROM hamsters hm
          LEFT JOIN yang_animal ya ON ya.name = hm.name
          LEFT JOIN home_animals ha ON ha.id = hm.genus_id;
 ```
+
+**Задание 13**
+Создать класс с Инкапсуляцией методов и наследованием по диаграмме
+
+```python
+# src/model/animal_base.py
+import datetime
+
+
+class Animal:
+    def __init__(self, name: str, age: datetime, commands: str) -> None:
+        self.name = name
+        self.age = age
+        self.commands = commands
+
+
+class HomeAnimal(Animal):
+    def __init__(self, name: str, age: datetime, commands: str) -> None:
+        super().__init__(name, age, commands)
+
+
+class PackedAnimal(Animal):
+    def __init__(self, name: str, age: datetime, commands: str) -> None:
+        super().__init__(name, age, commands)
+
+```
+
+```python
+# src/model/home_animal.py
+import datetime
+
+from src.model.animal_base import HomeAnimal
+
+
+class Dog(HomeAnimal):
+    def __init__(self, name: str, age: datetime, commands: str) -> None:
+        super().__init__(name, age, commands)
+
+
+class Cat(HomeAnimal):
+    def __init__(self, name: str, age: datetime, commands: str) -> None:
+        super().__init__(name, age, commands)
+
+
+class Hamster(HomeAnimal):
+    def __init__(self, name: str, age: datetime, commands: str) -> None:
+        super().__init__(name, age, commands)
+
+```
+
+```python
+# src/model/packed_animal.py
+import datetime
+
+from src.model.animal_base import PackedAnimal
+
+
+class Horse(PackedAnimal):
+    def __init__(self, name: str, age: datetime, commands: str) -> None:
+        super().__init__(name, age, commands)
+
+
+class Camel(PackedAnimal):
+    def __init__(self, name: str, age: datetime, commands: str) -> None:
+        super().__init__(name, age, commands)
+
+
+class Donkey(PackedAnimal):
+    def __init__(self, name: str, age: datetime, commands: str) -> None:
+        super().__init__(name, age, commands)
+
+```
