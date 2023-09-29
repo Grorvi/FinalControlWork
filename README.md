@@ -334,3 +334,36 @@ WHERE birthday BETWEEN ADDDATE(curdate(), INTERVAL -3 YEAR) AND ADDDATE(CURDATE(
 SELECT *
 FROM yang_animal;
 ```
+
+**Задание 12**
+
+Объединить все таблицы в одну, при этом сохраняя поля, указывающие на прошлую принадлежность к старым таблицам.
+
+**Решение**
+
+```sql
+SELECT h.name, h.birthday, h.commands, pa.genus_name, ya.age_in_month
+FROM horses h
+         LEFT JOIN yang_animal ya ON ya.name = h.name
+         LEFT JOIN packed_animals pa ON pa.id = h.genus_id
+UNION
+SELECT d.name, d.birthday, d.commands, pa.genus_name, ya.age_in_month
+FROM donkeys d
+         LEFT JOIN yang_animal ya ON ya.name = d.name
+         LEFT JOIN packed_animals pa ON pa.id = d.genus_id
+UNION
+SELECT c.name, c.birthday, c.commands, ha.genus_name, ya.age_in_month
+FROM cats c
+         LEFT JOIN yang_animal ya ON ya.name = c.name
+         LEFT JOIN home_animals ha ON ha.id = c.genus_id
+UNION
+SELECT d.name, d.birthday, d.commands, ha.genus_name, ya.age_in_month
+FROM dogs d
+         LEFT JOIN yang_animal ya ON ya.name = d.name
+         LEFT JOIN home_animals ha ON ha.id = d.genus_id
+UNION
+SELECT hm.name, hm.nirthday, hm.commands, ha.genus_name, ya.age_in_month
+FROM hamsters hm
+         LEFT JOIN yang_animal ya ON ya.name = hm.name
+         LEFT JOIN home_animals ha ON ha.id = hm.genus_id;
+```
