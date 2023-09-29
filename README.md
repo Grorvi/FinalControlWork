@@ -100,3 +100,17 @@ sudo wget https://download.docker.com/linux/ubuntu/dists/jammy/pool/stable/amd64
 sudo dpkg -i docker-ce-cli_20.10.133-0ubuntu-jammy_amd64.deb
 sudo dpkg -r docker-ce-cli
 ````
+
+**Задание 5**
+
+Выложить историю команд в терминале ubuntu.
+
+**Решение**
+
+[Задача 1](#Задание-1)
+
+[Задача 2](#Задание-2)
+
+[Задача 3](#Задание-3)
+
+[Задача 4](#Задание-4)
