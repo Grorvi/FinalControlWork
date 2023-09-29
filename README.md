@@ -439,3 +439,7 @@ class Donkey(PackedAnimal):
         super().__init__(name, age, commands)
 
 ```
+
+**Задание 14 и Задание 15**
+
+[**Решение**](./AnimalRegistrationSystem)
