@@ -124,3 +124,14 @@ sudo dpkg -r docker-ce-cli
 **Решение**
 
 ![class_Animals](./images/class_Animals.png)
+
+**Задание 7**
+
+В подключенном MySQL репозитории создать базу данных “Друзья человека”
+
+**Решение**
+
+```sql
+CREATE
+DATABASE human_friends;
+```
